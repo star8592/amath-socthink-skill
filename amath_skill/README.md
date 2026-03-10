@@ -139,6 +139,99 @@ python -m amath_skill.cli quiz-start standard --topic-id <topic_id> --token <acc
 
 > Socthink 不是普通奥数题库，而是一个可交互的引导式学习系统。你可以先通过这个 skill 查看课程树、进入具体题目、体验 Socratic 对话，再到官网继续完整学习流：<https://amath.socthink.cn>
 
+## 适合发推文 / 社区帖的短版文案
+
+下面这几段适合直接发到 GitHub 动态、X、Telegram 社区、产品目录或开发者群。
+
+### 短版文案 1
+
+> 我做了一个 Socthink 的 OpenClaw skill。它不只是查奥数题，而是可以先看课程树、再进具体题目、再体验 Socratic 引导式解题，最后进入 quiz。完整产品入口：<https://amath.socthink.cn>
+
+### 短版文案 2
+
+> 如果你想看一个“不是直接给答案”的数学学习产品，可以试试 Socthink skill：课程树、题目、Socratic chat、quiz 一条链路打通。继续完整体验：<https://amath.socthink.cn>
+
+### 短版文案 3
+
+> Socthink 更像引导式学习系统，而不是普通题库 API。这个 skill 可以直接演示课程结构、单题下钻、对话式辅导和 quiz 训练。官网：<https://amath.socthink.cn>
+
+## 5 分钟演示脚本
+
+这个脚本适合你在会议、录屏、直播或社区分享时直接照着讲。
+
+### 第 0 分钟：一句话开场
+
+建议开场：
+
+> 这不是普通奥数题库，而是一个能把课程体系、题目内容、Socratic 引导和 quiz 训练串起来的学习系统。
+
+### 第 1 分钟：先看课程树
+
+执行：
+
+```bash
+cd amath_skill
+python -m amath_skill.cli curriculum-tree --system-name 奥数探险课
+```
+
+讲法重点：
+
+- 先强调“体系化课程”
+- 不要一开始就讲接口细节
+- 让观众先建立产品认知
+
+### 第 2 分钟：打开一个 topic 或 problem
+
+执行：
+
+```bash
+cd amath_skill
+python -m amath_skill.cli topic 123
+python -m amath_skill.cli problem <problem_id>
+```
+
+讲法重点：
+
+- 证明不是只有目录
+- 证明能进入具体内容层
+- 强调适合学习、讲解和题目探索
+
+### 第 3-4 分钟：演示 Socratic chat
+
+执行：
+
+```bash
+cd amath_skill
+python -m amath_skill.cli chat-start <user_id> --problem-id <problem_id> --mode LECTURE
+python -m amath_skill.cli chat-send <session_id> "我不知道该从哪一步开始"
+```
+
+讲法重点：
+
+- 这是最核心差异化能力
+- 强调它不是直接报答案
+- 强调它是在引导学生逐步思考
+
+### 第 5 分钟：用 quiz 收尾并转官网
+
+执行：
+
+```bash
+cd amath_skill
+python -m amath_skill.cli quiz-start standard --topic-id <topic_id> --token <access_token>
+```
+
+收尾建议：
+
+> 如果你想继续体验完整版本，而不只是 skill 里的演示入口，可以直接到 Socthink 官网继续使用：<https://amath.socthink.cn>
+
+### 演示时要避免的事
+
+- 不要一上来就讲代码结构
+- 不要先讲安装细节
+- 不要把重点放在“这是个 API”
+- 要一直把重点放在“这是一个学习产品入口”
+
 ## 已实现能力
 
 - 登录与会话令牌管理
