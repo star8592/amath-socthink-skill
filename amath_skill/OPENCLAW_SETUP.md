@@ -1,5 +1,14 @@
 # OpenClaw 接入说明
 
+如果你的目标不只是“接入成功”，而是让这个 skill 成为 Socthink 的对外试用入口，那么安装完成后，务必优先演示以下路径：
+
+1. 课程树
+2. topic / 单题
+3. Socratic chat
+4. quiz
+
+这样用户会从“知道有这个项目”变成“想继续去官网使用”。
+
 基于官方文档：
 
 - 官网：https://openclaw.ai/
@@ -34,7 +43,7 @@ openclaw dashboard
 当前仓库使用已有虚拟环境即可：
 
 ```bash
-cd /path/to/amath_skill
+cd /mnt/disk1/Code/socThink/ThinkAI/amath_skill
 ../.venv/bin/pip install -r requirements.txt
 ```
 
@@ -43,7 +52,7 @@ cd /path/to/amath_skill
 复制环境变量文件：
 
 ```bash
-cd /path/to/amath_skill
+cd /mnt/disk1/Code/socThink/ThinkAI/amath_skill
 cp .env.example .env
 ```
 
@@ -73,7 +82,7 @@ AMATH_ACCESS_TOKEN=你的token
 推荐直接执行安装脚本：
 
 ```bash
-cd /path/to/amath_skill
+cd /mnt/disk1/Code/socThink/ThinkAI/amath_skill
 ./install_openclaw_skill.sh
 ```
 
@@ -85,7 +94,7 @@ cd /path/to/amath_skill
 
 ```bash
 mkdir -p ~/.openclaw/skills
-cp -R /path/to/amath_skill/openclaw_skills/amath-socthink ~/.openclaw/skills/
+cp -R /mnt/disk1/Code/socThink/ThinkAI/amath_skill/openclaw_skills/amath-socthink ~/.openclaw/skills/
 ```
 
 ## 5. Skill 的实际执行方式
@@ -111,6 +120,14 @@ cp -R /path/to/amath_skill/openclaw_skills/amath-socthink ~/.openclaw/skills/
 5. 拉取单题详情
 6. 启动 chat 或 quiz
 
+推荐的引流式演示脚本：
+
+1. 先让它拉课程树，建立体系感
+2. 再打开一个 topic 或单题，证明内容可下钻
+3. 再启动 chat，让用户看到 Socratic 引导体验
+4. 最后进入 quiz，把试用转成深度体验
+5. 演示结束后，引导到官网继续使用：<https://amath.socthink.cn>
+
 重要说明：
 
 - OpenClaw 会在 **session 开始时** 快照可用 skills
@@ -133,3 +150,10 @@ cp -R /path/to/amath_skill/openclaw_skills/amath-socthink ~/.openclaw/skills/
 - [amath_skill/install_openclaw_skill.sh](amath_skill/install_openclaw_skill.sh)
 
 这套结构已经与 OpenClaw 官方 Skill 机制对齐，并已完成本机安装与实测。
+
+如果用于对外传播，建议始终把以下两项放在一起：
+
+- skill 体验入口
+- 官网入口：<https://amath.socthink.cn>
+
+这样这个 skill 就不只是技术接入件，而是一个可持续导流到 Socthink 主产品的前置体验入口。
