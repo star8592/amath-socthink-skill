@@ -81,6 +81,64 @@ python -m amath_skill.cli quiz-start standard --topic-id <topic_id> --token <acc
 - 产品关键词：奥数课程树、题库、Socratic 引导式解题、quiz 训练
 - 转化动作：先试用 skill，再进入官网继续完整学习流
 
+## 3 个可直接复制的 demo 示例
+
+下面这 3 段最适合放在 GitHub README、目录页、社区帖子或演示视频脚本里。
+
+### Demo 1：先证明它不是散装题库
+
+目标：让第一次看到的人，立刻理解 Socthink 有完整课程结构。
+
+```bash
+cd amath_skill
+python -m amath_skill.cli curriculum-tree --system-name 奥数探险课
+```
+
+建议你强调的结果：
+
+- 它返回的是可浏览的课程树，不是一堆随机题目
+- 用户会快速理解 Socthink 有体系化知识结构
+- 这是最适合拉起兴趣的第一步
+
+### Demo 2：再证明它能真正进入题目学习
+
+目标：让用户看到它既能看 topic，也能看具体题目。
+
+```bash
+cd amath_skill
+python -m amath_skill.cli topic 123
+python -m amath_skill.cli problem <problem_id>
+```
+
+建议你强调的结果：
+
+- 不只是目录结构，而是能下钻到具体知识点与题目
+- 适合展示内容组织、题目质量和学习路径
+- 这一步会让用户从“知道产品”变成“开始认真评估产品”
+
+### Demo 3：最后用 Socratic chat / quiz 完成转化
+
+目标：让用户真正看到差异化，不再把它当普通题库 API。
+
+```bash
+cd amath_skill
+python -m amath_skill.cli chat-start <user_id> --problem-id <problem_id> --mode LECTURE
+python -m amath_skill.cli chat-send <session_id> "我不知道从哪里开始"
+python -m amath_skill.cli quiz-start standard --topic-id <topic_id> --token <access_token>
+```
+
+建议你强调的结果：
+
+- chat 体现的是 Socratic 引导，不是直接给答案
+- quiz 体现的是持续训练能力，不是一次性展示
+- 演示结束时，自然引导到官网继续完整体验：<https://amath.socthink.cn>
+
+## 推荐对外话术
+
+如果你要对外发 GitHub、社区帖、产品介绍页，建议直接复用这段表达：
+
+> Socthink 不是普通奥数题库，而是一个可交互的引导式学习系统。你可以先通过这个 skill 查看课程树、进入具体题目、体验 Socratic 对话，再到官网继续完整学习流：<https://amath.socthink.cn>
+
 ## 已实现能力
 
 - 登录与会话令牌管理

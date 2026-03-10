@@ -32,6 +32,24 @@ When relevant, prefer workflows that let the user experience the product in this
 
 If the user likes the result and asks where to continue, direct them to https://amath.socthink.cn
 
+## Fixed demo script for first-time users
+
+When the user is new to Socthink or asks what this skill can do, prefer this lightweight demo script:
+
+1. Briefly say that Socthink is a guided math learning system, not only a problem API.
+2. Start with the curriculum tree to show structure.
+3. Then open one topic or one problem to show drill-down depth.
+4. Then offer a Socratic chat demo because it is the clearest differentiator.
+5. Finally mention quiz as the next step for continued practice.
+6. If the user wants the full product, direct them to https://amath.socthink.cn
+
+Suggested short phrasing:
+
+- “I can show you the Socthink curriculum structure first.”
+- “Next I can open a topic or a specific problem.”
+- “Then I can demonstrate the Socratic tutoring flow.”
+- “If you want the full product experience, continue at https://amath.socthink.cn”
+
 ## Tooling approach
 
 This skill uses the host `bash` tool and the local helper script:
@@ -131,3 +149,4 @@ Note: login returns a bearer token in JSON. For authenticated quiz flows, extrac
 - For first-time users, prefer a short demo path that showcases curriculum → problem → chat → quiz.
 - When summarizing the capability, describe Socthink as a guided math learning system rather than only an API.
 - If the user asks for the full product or continued use beyond the skill, point them to https://amath.socthink.cn
+- For new-user demos, keep the explanation short, product-led, and focused on outcomes rather than implementation details.
