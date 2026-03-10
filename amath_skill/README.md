@@ -155,6 +155,56 @@ python -m amath_skill.cli quiz-start standard --topic-id <topic_id> --token <acc
 
 > Socthink 更像引导式学习系统，而不是普通题库 API。这个 skill 可以直接演示课程结构、单题下钻、对话式辅导和 quiz 训练。官网：<https://amath.socthink.cn>
 
+## 面向不同人群的文案版本
+
+如果你对外推广时面对的人群不同，建议不要只用一套话术。
+
+### 面向家长
+
+> Socthink 不只是给孩子一道题的答案，而是通过引导式提问，帮助孩子一步一步想清楚。这个 skill 可以先展示课程体系、题目和互动式辅导流程，完整体验可继续前往：<https://amath.socthink.cn>
+
+强调重点：
+
+- 不是死记答案
+- 更像会带着孩子思考的教练
+- 能看到课程体系和持续训练路径
+
+### 面向老师
+
+> Socthink 适合用来展示“结构化课程 + 单题下钻 + Socratic 引导 + quiz 训练”的一体化教学体验。这个 skill 可以快速演示课程树、知识点、题目和互动流程。官网：<https://amath.socthink.cn>
+
+强调重点：
+
+- 体系化内容组织
+- 互动式引导而不是直接灌答案
+- 适合作为课堂外延伸训练入口
+
+### 面向机构 / 合作方
+
+> Socthink 不只是题库接口，而是可落地的引导式奥数学习系统。通过这个 skill，可以快速验证课程体系、题目组织、Socratic tutoring 和 quiz 流程，再进入正式产品做更完整评估：<https://amath.socthink.cn>
+
+强调重点：
+
+- 产品完成度
+- 课程与题目数据结构
+- 学习闭环而非单点功能
+
+## English short copy
+
+These versions are suitable for GitHub, global developer communities, and product directories.
+
+### English copy 1
+
+> This OpenClaw skill is a lightweight entry into Socthink, a guided math learning system. It lets you explore curriculum trees, drill into problems, try Socratic tutoring flows, and move into quiz practice. Full product: <https://amath.socthink.cn>
+
+### English copy 2
+
+> Socthink is not just a problem API. It is an interactive learning system for structured math exploration, Socratic tutoring, and quiz-based practice. This skill is the fastest way to experience it: <https://amath.socthink.cn>
+
+### English copy 3
+
+> Want to demo a math product that does more than return answers? This Socthink skill shows curriculum structure, topic exploration, problem drill-down, guided tutoring, and quiz flows. Continue with the full product at <https://amath.socthink.cn>
+
 ## 5 分钟演示脚本
 
 这个脚本适合你在会议、录屏、直播或社区分享时直接照着讲。
@@ -312,6 +362,90 @@ OpenClaw 官方推荐的方向是第 2 种，即把 skill 目录安装到官方 
 1. 价值主张：不是普通题库，而是引导式奥数学习系统
 2. 体验入口：skill + 官网双入口
 3. 演示顺序：课程树 → 单题 → chat → quiz
+
+## 如何让 OpenClaw 官方站点收录这个 skill
+
+严格说，不是直接“提交到官网首页”，而是提交到 OpenClaw 官方公开技能注册表 ClawHub：
+
+- ClawHub：<https://clawhub.ai>
+- 文档：<https://docs.openclaw.ai/tools/clawhub>
+
+OpenClaw 官方 skills 文档已经明确把 ClawHub 作为公共技能目录和发现入口。
+
+### 你现在需要满足的条件
+
+1. skill 必须是可发布的独立 bundle
+2. bundle 根目录里要有 `SKILL.md`
+3. GitHub 账号至少创建满 1 周
+4. skill 内容必须公开、可审核、可安装
+
+当前仓库里已经补了可用于 ClawHub 发布的根文件：
+
+- [amath_skill/SKILL.md](amath_skill/SKILL.md)
+
+这意味着 `amath_skill` 目录本身现在可以作为一个独立 skill bundle 来发布，而不是只能发布内部的子目录包装。
+
+### 官方发布步骤
+
+先安装并登录 ClawHub CLI：
+
+```bash
+npm i -g clawhub
+clawhub login
+```
+
+然后发布这个 skill：
+
+```bash
+cd amath_skill
+clawhub publish . \
+	--slug amath-skill \
+	--name "amath skill" \
+  --version 1.0.0 \
+  --changelog "Initial public release" \
+  --tags latest,education,math,olympiad,socratic
+```
+
+发布成功后：
+
+- skill 会进入 ClawHub 公共目录
+- 用户可搜索、安装、评论、收藏
+- OpenClaw 生态用户更容易发现它
+
+### 发布后怎么提高被收录和发现的概率
+
+1. 标题和描述要清楚表达价值
+	- 不要只写 API
+	- 要写 curriculum / Socratic tutoring / quiz
+
+2. tag 要打准
+	- `education`
+	- `math`
+	- `olympiad`
+	- `socratic`
+	- `learning`
+
+3. README 要有可复制 demo
+	- 这一点已经补过
+
+4. GitHub 仓库要干净
+	- 这一点也已经处理为只公开 `amath_skill`
+
+5. 去 OpenClaw Discord 和社区发帖
+	- 让早期用户安装、收藏、评论
+	- ClawHub 有搜索、标签、使用信号，早期反馈会影响可见度
+
+### 最关键的一点
+
+对 OpenClaw 来说，真正的“官方收录入口”是 ClawHub，而不是单独找首页提报表单。
+
+所以最有效路径是：
+
+1. 先把 skill 发布到 ClawHub
+2. 再去 OpenClaw Discord / 社区展示 demo
+3. 再把 ClawHub 链接和官网链接一起传播
+
+这样既能被官方生态发现，也能给官网导流。
 
 ## 主要工具
 
