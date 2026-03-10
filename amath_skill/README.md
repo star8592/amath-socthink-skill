@@ -451,6 +451,9 @@ clawhub publish . \
 
 - 发布检查表：[amath_skill/CLAWHUB_PUBLISH_CHECKLIST.md](amath_skill/CLAWHUB_PUBLISH_CHECKLIST.md)
 - 社区发帖文案包：[amath_skill/COMMUNITY_POSTS.md](amath_skill/COMMUNITY_POSTS.md)
+- Discord 首发帖：[amath_skill/DISCORD_LAUNCH_POST.md](amath_skill/DISCORD_LAUNCH_POST.md)
+- ClawHub 页面简介文案：[amath_skill/CLAWHUB_LISTING_COPY.md](amath_skill/CLAWHUB_LISTING_COPY.md)
+- 官网安装入口文案：[amath_skill/WEBSITE_INSTALL_COPY.md](amath_skill/WEBSITE_INSTALL_COPY.md)
 
 ## 主要工具
 
