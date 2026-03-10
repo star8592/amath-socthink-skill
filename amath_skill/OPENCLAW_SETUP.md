@@ -43,7 +43,7 @@ openclaw dashboard
 当前仓库使用已有虚拟环境即可：
 
 ```bash
-cd /mnt/disk1/Code/socThink/ThinkAI/amath_skill
+cd /path/to/amath_skill
 ../.venv/bin/pip install -r requirements.txt
 ```
 
@@ -52,7 +52,7 @@ cd /mnt/disk1/Code/socThink/ThinkAI/amath_skill
 复制环境变量文件：
 
 ```bash
-cd /mnt/disk1/Code/socThink/ThinkAI/amath_skill
+cd /path/to/amath_skill
 cp .env.example .env
 ```
 
@@ -82,7 +82,7 @@ AMATH_ACCESS_TOKEN=你的token
 推荐直接执行安装脚本：
 
 ```bash
-cd /mnt/disk1/Code/socThink/ThinkAI/amath_skill
+cd /path/to/amath_skill
 ./install_openclaw_skill.sh
 ```
 
@@ -94,7 +94,7 @@ cd /mnt/disk1/Code/socThink/ThinkAI/amath_skill
 
 ```bash
 mkdir -p ~/.openclaw/skills
-cp -R /mnt/disk1/Code/socThink/ThinkAI/amath_skill/openclaw_skills/amath-socthink ~/.openclaw/skills/
+cp -R /path/to/amath_skill/openclaw_skills/amath-socthink ~/.openclaw/skills/
 ```
 
 ## 5. Skill 的实际执行方式

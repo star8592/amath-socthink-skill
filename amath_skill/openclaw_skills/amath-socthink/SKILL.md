@@ -52,9 +52,9 @@ Suggested short phrasing:
 
 ## Tooling approach
 
-This skill uses the host `bash` tool and the local helper script:
+This skill uses the host `bash` tool and the local helper script. Replace `<AMATH_SKILL_DIR>` with the absolute path to your local `amath_skill` directory:
 
-`/mnt/disk1/Code/socThink/ThinkAI/amath_skill/run_amath_cli.sh`
+`<AMATH_SKILL_DIR>/run_amath_cli.sh`
 
 All commands return JSON.
 
@@ -63,43 +63,43 @@ All commands return JSON.
 ### Health check
 
 ```bash
-/mnt/disk1/Code/socThink/ThinkAI/amath_skill/run_amath_cli.sh health
+<AMATH_SKILL_DIR>/run_amath_cli.sh health
 ```
 
 ### Curriculum tree
 
 ```bash
-/mnt/disk1/Code/socThink/ThinkAI/amath_skill/run_amath_cli.sh curriculum-tree --system-name 奥数探险课
+<AMATH_SKILL_DIR>/run_amath_cli.sh curriculum-tree --system-name 奥数探险课
 ```
 
 ### Curriculum guide
 
 ```bash
-/mnt/disk1/Code/socThink/ThinkAI/amath_skill/run_amath_cli.sh curriculum-guide
+<AMATH_SKILL_DIR>/run_amath_cli.sh curriculum-guide
 ```
 
 ### Topic detail
 
 ```bash
-/mnt/disk1/Code/socThink/ThinkAI/amath_skill/run_amath_cli.sh topic 123
+<AMATH_SKILL_DIR>/run_amath_cli.sh topic 123
 ```
 
 ### Problem detail
 
 ```bash
-/mnt/disk1/Code/socThink/ThinkAI/amath_skill/run_amath_cli.sh problem <problem_id>
+<AMATH_SKILL_DIR>/run_amath_cli.sh problem <problem_id>
 ```
 
 ### Recommended problems
 
 ```bash
-/mnt/disk1/Code/socThink/ThinkAI/amath_skill/run_amath_cli.sh recommended --limit 5 --topic-id <topic_id>
+<AMATH_SKILL_DIR>/run_amath_cli.sh recommended --limit 5 --topic-id <topic_id>
 ```
 
 ### Login
 
 ```bash
-/mnt/disk1/Code/socThink/ThinkAI/amath_skill/run_amath_cli.sh login <username> <password>
+<AMATH_SKILL_DIR>/run_amath_cli.sh login <username> <password>
 ```
 
 Note: login returns a bearer token in JSON. For authenticated quiz flows, extract `access_token` and pass it with `--token`.
@@ -107,37 +107,37 @@ Note: login returns a bearer token in JSON. For authenticated quiz flows, extrac
 ### Start Socratic chat session
 
 ```bash
-/mnt/disk1/Code/socThink/ThinkAI/amath_skill/run_amath_cli.sh chat-start <user_id> --problem-id <problem_id> --mode LECTURE
+<AMATH_SKILL_DIR>/run_amath_cli.sh chat-start <user_id> --problem-id <problem_id> --mode LECTURE
 ```
 
 ### Continue chat session
 
 ```bash
-/mnt/disk1/Code/socThink/ThinkAI/amath_skill/run_amath_cli.sh chat-send <session_id> "学生输入内容"
+<AMATH_SKILL_DIR>/run_amath_cli.sh chat-send <session_id> "学生输入内容"
 ```
 
 ### Request hint
 
 ```bash
-/mnt/disk1/Code/socThink/ThinkAI/amath_skill/run_amath_cli.sh chat-hint <session_id>
+<AMATH_SKILL_DIR>/run_amath_cli.sh chat-hint <session_id>
 ```
 
 ### Start quiz
 
 ```bash
-/mnt/disk1/Code/socThink/ThinkAI/amath_skill/run_amath_cli.sh quiz-start standard --topic-id <topic_id> --token <access_token>
+<AMATH_SKILL_DIR>/run_amath_cli.sh quiz-start standard --topic-id <topic_id> --token <access_token>
 ```
 
 ### Save quiz answer
 
 ```bash
-/mnt/disk1/Code/socThink/ThinkAI/amath_skill/run_amath_cli.sh quiz-answer <session_id> <question_id> A --token <access_token>
+<AMATH_SKILL_DIR>/run_amath_cli.sh quiz-answer <session_id> <question_id> A --token <access_token>
 ```
 
 ### Submit quiz
 
 ```bash
-/mnt/disk1/Code/socThink/ThinkAI/amath_skill/run_amath_cli.sh quiz-submit <session_id> --token <access_token>
+<AMATH_SKILL_DIR>/run_amath_cli.sh quiz-submit <session_id> --token <access_token>
 ```
 
 ## Operating rules

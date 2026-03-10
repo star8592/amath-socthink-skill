@@ -447,6 +447,11 @@ clawhub publish . \
 
 这样既能被官方生态发现，也能给官网导流。
 
+配套材料已经整理好：
+
+- 发布检查表：[amath_skill/CLAWHUB_PUBLISH_CHECKLIST.md](amath_skill/CLAWHUB_PUBLISH_CHECKLIST.md)
+- 社区发帖文案包：[amath_skill/COMMUNITY_POSTS.md](amath_skill/COMMUNITY_POSTS.md)
+
 ## 主要工具
 
 - `amath_healthcheck`
